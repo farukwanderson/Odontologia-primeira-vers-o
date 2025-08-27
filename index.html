@@ -5,73 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clínica Odonto Sorriso</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Animações e transições adicionais */
+    .fade-in { animation: fadeIn 1.2s ease-in-out; }
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    .hover-zoom:hover { transform: scale(1.05); transition: transform 0.3s; }
+  </style>
 </head>
 <body class="bg-white text-gray-900">
 
   <!-- Cabeçalho -->
-  <header class="flex justify-between items-center p-6 shadow-md bg-gradient-to-r from-blue-500 to-blue-700 text-white">
-    <h1 class="text-2xl font-bold tracking-wide">Clínica Odonto Sorriso</h1>
+  <header class="flex justify-between items-center p-6 shadow-md bg-gradient-to-r from-blue-500 to-blue-700 text-white sticky top-0 z-50">
+    <h1 class="text-3xl font-bold tracking-wide">Clínica Odonto Sorriso</h1>
     <div class="flex gap-3 items-center">
-      <a href="https://wa.me/5563992841333" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Agendar</a>
+      <a href="https://wa.me/5563992841333" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg shadow-lg hover:shadow-xl transition">Agendar</a>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="text-center py-16 px-6">
-    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-blue-600">Sorriso saudável, vida feliz!</h2>
-    <p class="max-w-2xl mx-auto text-lg mb-6 text-gray-700">Atendimento humanizado com Dra. Mayara Rodrigues da Paz (CRO-SP 123456), cuidando de cada detalhe do seu sorriso.</p>
-    <a href="https://wa.me/5563992841333" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl shadow-lg">Agende sua consulta agora</a>
+  <section class="relative text-center py-24 px-6 bg-gradient-to-r from-blue-100 to-blue-200 fade-in">
+    <h2 class="text-5xl md:text-6xl font-extrabold mb-6 text-blue-700">Sorriso saudável, vida feliz!</h2>
+    <p class="max-w-3xl mx-auto text-xl mb-8 text-gray-700">Atendimento humanizado com Dra. Mayara Rodrigues da Paz (CRO-SP 123456), cuidando de cada detalhe do seu sorriso.</p>
+    <a href="https://wa.me/5563992841333" target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white px-10 py-4 rounded-3xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">Agende sua consulta agora</a>
   </section>
 
   <!-- Serviços -->
-  <section class="p-10 bg-gray-50">
-    <h3 class="text-2xl font-bold text-center mb-10">Nossos Serviços</h3>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="shadow-lg rounded-2xl p-6 text-center">
-        <div class="text-blue-600 text-4xl mb-3">😃</div>
-        <h4 class="font-semibold text-lg">Limpeza Dental</h4>
-        <p class="text-gray-600 text-sm">Remoção de placa e tártaro para saúde bucal.</p>
+  <section class="p-16 bg-gray-50">
+    <h3 class="text-3xl font-bold text-center mb-14">Nossos Serviços</h3>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="shadow-lg rounded-3xl p-8 text-center bg-white hover-zoom cursor-pointer transition transform">
+        <div class="text-blue-600 text-5xl mb-5">😃</div>
+        <h4 class="font-semibold text-2xl mb-2">Limpeza Dental</h4>
+        <p class="text-gray-600 text-base">Remoção de placa e tártaro para saúde bucal.</p>
       </div>
-      <div class="shadow-lg rounded-2xl p-6 text-center">
-        <div class="text-blue-600 text-4xl mb-3">✨</div>
-        <h4 class="font-semibold text-lg">Clareamento Dental</h4>
-        <p class="text-gray-600 text-sm">Deixe seus dentes mais brancos e brilhantes.</p>
+      <div class="shadow-lg rounded-3xl p-8 text-center bg-white hover-zoom cursor-pointer transition transform">
+        <div class="text-blue-600 text-5xl mb-5">✨</div>
+        <h4 class="font-semibold text-2xl mb-2">Clareamento Dental</h4>
+        <p class="text-gray-600 text-base">Deixe seus dentes mais brancos e brilhantes.</p>
       </div>
-      <div class="shadow-lg rounded-2xl p-6 text-center">
-        <div class="text-blue-600 text-4xl mb-3">⭐</div>
-        <h4 class="font-semibold text-lg">Implantes Dentários</h4>
-        <p class="text-gray-600 text-sm">Recupere seu sorriso com conforto e segurança.</p>
+      <div class="shadow-lg rounded-3xl p-8 text-center bg-white hover-zoom cursor-pointer transition transform">
+        <div class="text-blue-600 text-5xl mb-5">⭐</div>
+        <h4 class="font-semibold text-2xl mb-2">Implantes Dentários</h4>
+        <p class="text-gray-600 text-base">Recupere seu sorriso com conforto e segurança.</p>
       </div>
     </div>
   </section>
 
   <!-- Depoimentos -->
-  <section class="p-10 bg-blue-50">
-    <h3 class="text-2xl font-bold text-center mb-10">O que nossos pacientes dizem</h3>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="shadow-md p-6">
-        <p class="italic mb-3">“Atendimento excelente, muito atenciosa!”</p>
+  <section class="p-16 bg-gradient-to-r from-blue-50 to-blue-100">
+    <h3 class="text-3xl font-bold text-center mb-14">O que nossos pacientes dizem</h3>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="shadow-xl p-8 rounded-3xl bg-white hover-zoom cursor-pointer transition transform">
+        <p class="italic mb-5 text-gray-700">“Atendimento excelente, muito atenciosa!”</p>
         <div class="flex gap-1 text-yellow-500">★★★★★</div>
       </div>
-      <div class="shadow-md p-6">
-        <p class="italic mb-3">“Melhor experiência odontológica que já tive.”</p>
+      <div class="shadow-xl p-8 rounded-3xl bg-white hover-zoom cursor-pointer transition transform">
+        <p class="italic mb-5 text-gray-700">“Melhor experiência odontológica que já tive.”</p>
         <div class="flex gap-1 text-yellow-500">★★★★★</div>
       </div>
     </div>
   </section>
 
   <!-- Contato -->
-  <footer class="p-10 bg-gray-100 text-center space-y-3">
-    <h4 class="text-xl font-bold mb-4">Entre em Contato</h4>
-    <p>📞 (63) 99284-1333</p>
-    <p>✉️ contato@odontosorriso.com</p>
-    <p>📍 Av. Paulista, 1000 - São Paulo/SP</p>
-    <p>Seg-Sex 9h-18h | Sáb 9h-13h</p>
-    <p class="mt-4 text-sm text-gray-500">© 2025 Clínica Odonto Sorriso. Todos os direitos reservados.</p>
+  <footer class="p-16 bg-gray-100 text-center space-y-4">
+    <h4 class="text-2xl font-bold mb-4">Entre em Contato</h4>
+    <p class="text-lg">📞 (63) 99284-1333</p>
+    <p class="text-lg">✉️ contato@odontosorriso.com</p>
+    <p class="text-lg">📍 Av. Paulista, 1000 - São Paulo/SP</p>
+    <p class="text-lg">Seg-Sex 9h-18h | Sáb 9h-13h</p>
+    <p class="mt-6 text-sm text-gray-500">© 2025 Clínica Odonto Sorriso. Todos os direitos reservados.</p>
   </footer>
 
   <!-- Botão WhatsApp -->
-  <a href="https://wa.me/5563992841333" class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-xl text-white hover:bg-green-600 animate-bounce" target="_blank">💬</a>
+  <a href="https://wa.me/5563992841333" class="fixed bottom-6 right-6 bg-green-500 p-5 rounded-full shadow-2xl text-white hover:bg-green-600 animate-bounce transition transform hover:scale-110" target="_blank">💬</a>
 
 </body>
 </html>
